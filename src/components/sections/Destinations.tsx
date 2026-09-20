@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { copy, destinations } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 const spanClass: Record<string, string> = {
   large: "min-h-[210px] sm:min-h-[280px] md:col-span-8 md:row-span-2 md:min-h-[520px]",
@@ -32,7 +32,7 @@ export function Destinations() {
               className={cn("dest-card relative overflow-hidden", spanClass[item.span])}
             >
               <Image
-                src={item.image}
+                src={assetPath(item.image)}
                 alt={item.imageAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"

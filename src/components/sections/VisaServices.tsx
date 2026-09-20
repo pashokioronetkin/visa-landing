@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { copy, visaServices } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
+import { assetPath } from "@/lib/utils";
 
 export function VisaServices() {
   const featured = visaServices.find((item) => item.featured);
@@ -25,7 +26,7 @@ export function VisaServices() {
           {featured ? (
             <Reveal className="group relative min-h-[280px] overflow-hidden sm:min-h-[360px] lg:col-span-7 lg:min-h-[560px]">
               <Image
-                src={featured.image}
+                src={assetPath(featured.image)}
                 alt={featured.imageAlt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -50,7 +51,7 @@ export function VisaServices() {
             {rest.slice(0, 2).map((item, index) => (
               <Reveal key={item.id} delay={0.08 * (index + 1)} className="group relative min-h-[200px] overflow-hidden sm:min-h-[220px]">
                 <Image
-                  src={item.image}
+                  src={assetPath(item.image)}
                   alt={item.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 38vw"

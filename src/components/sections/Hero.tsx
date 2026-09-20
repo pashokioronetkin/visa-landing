@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { hero } from "@/content/site";
+import { assetPath } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -26,7 +27,7 @@ export function Hero() {
 
         <div className="relative mx-3 mb-6 h-[38vh] min-h-[240px] overflow-hidden border border-line sm:mx-5 sm:h-[44vh] md:mx-8 lg:mx-0 lg:mb-0 lg:h-auto lg:min-h-[100svh] lg:border-y-0 lg:border-r-0">
           <Image
-            src="/images/hero.jpg"
+            src={assetPath("/images/hero.jpg")}
             alt="Колоннада собора Святого Петра в Риме"
             fill
             priority

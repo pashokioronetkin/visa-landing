@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { copy } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
+import { assetPath } from "@/lib/utils";
 
 export function FinalCTA() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/cta.jpg"
+          src={assetPath("/images/cta.jpg")}
           alt="Вечерняя улица Парижа с тёплым светом окон"
           fill
           sizes="100vw"

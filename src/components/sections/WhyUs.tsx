@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { copy, whyUs } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
+import { assetPath } from "@/lib/utils";
 
 export function WhyUs() {
   return (
@@ -14,7 +15,7 @@ export function WhyUs() {
           <p className="mt-5 max-w-md text-base leading-7 text-paper/68">{copy.whyLead}</p>
           <div className="relative mt-8 hidden overflow-hidden lg:block lg:h-[320px]">
             <Image
-              src="/images/why.jpg"
+              src={assetPath("/images/why.jpg")}
               alt="Тихий двор европейского отеля с аркадой"
               fill
               sizes="40vw"
