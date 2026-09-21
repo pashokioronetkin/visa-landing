@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="site-header fixed inset-x-0 top-0 z-50">
-      <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-6">
+      <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-2 sm:gap-4 xl:gap-6">
         <Logo />
 
         <nav className="hidden items-center gap-5 xl:flex" aria-label="Основная навигация">
@@ -32,13 +32,17 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <a href="#apply" className="btn btn-primary hidden px-4 xl:inline-flex">
-            Получить консультацию
+        <div className="flex shrink-0 items-center gap-2">
+          <a
+            href="#apply"
+            className="btn btn-primary header-cta"
+          >
+            <span className="xl:hidden">Консультация</span>
+            <span className="hidden xl:inline">Получить консультацию</span>
           </a>
           <button
             type="button"
-            className="grid h-10 w-10 place-items-center border border-line bg-paper xl:hidden"
+            className="grid h-9 w-9 shrink-0 place-items-center border border-line bg-paper sm:h-10 sm:w-10 xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Закрыть меню" : "Открыть меню"}

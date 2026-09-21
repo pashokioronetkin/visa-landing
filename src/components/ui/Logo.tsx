@@ -11,7 +11,7 @@ export function Logo({ className, inverted = false }: LogoProps) {
     <a
       href="#top"
       className={cn(
-        "group inline-flex items-center gap-3",
+        "group inline-flex min-w-0 items-center gap-2 sm:gap-3",
         inverted ? "text-paper" : "text-ink",
         className,
       )}
@@ -42,7 +42,7 @@ export function Logo({ className, inverted = false }: LogoProps) {
         </svg>
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-display text-[1.2rem] tracking-[0.14em]">
+        <span className="font-display text-[1.05rem] tracking-[0.14em] sm:text-[1.2rem]">
           {siteConfig.name.toUpperCase()}
         </span>
         <span
