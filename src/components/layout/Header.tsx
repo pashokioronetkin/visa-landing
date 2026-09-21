@@ -33,7 +33,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#apply" className="btn btn-primary hidden px-3 md:inline-flex xl:px-4">
+          <a href="#apply" className="btn btn-primary hidden px-4 xl:inline-flex">
             Получить консультацию
           </a>
           <button
