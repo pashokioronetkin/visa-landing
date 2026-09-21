@@ -5,7 +5,8 @@ import { assetPath } from "@/lib/utils";
 
 export function VisaServices() {
   const featured = visaServices.find((item) => item.featured);
-  const rest = visaServices.filter((item) => !item.featured);
+  const photoCards = visaServices.filter((item) => !item.featured && item.id !== "other");
+  const other = visaServices.find((item) => item.id === "other");
 
   return (
     <section id="visas" className="section-pad">
@@ -48,7 +49,7 @@ export function VisaServices() {
           ) : null}
 
           <div className="grid gap-4 lg:col-span-5">
-            {rest.slice(0, 2).map((item, index) => (
+            {photoCards.slice(0, 2).map((item, index) => (
               <Reveal key={item.id} delay={0.08 * (index + 1)} className="group relative min-h-[200px] overflow-hidden sm:min-h-[220px]">
                 <Image
                   src={assetPath(item.image)}
@@ -69,15 +70,35 @@ export function VisaServices() {
             ))}
           </div>
 
-          {rest[2] ? (
-            <Reveal className="border border-line bg-ivory p-7 md:p-10 lg:col-span-12">
-              <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          {photoCards[2] ? (
+            <Reveal className="group relative min-h-[220px] overflow-hidden sm:min-h-[260px] lg:col-span-5">
+              <Image
+                src={assetPath(photoCards[2].image)}
+                alt={photoCards[2].imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="img-treat object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/15 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <p className="text-[0.68rem] tracking-[0.18em] text-bronze-light uppercase">
+                  {photoCards[2].title}
+                </p>
+                <h3 className="mt-2 font-display text-3xl text-paper">{photoCards[2].name}</h3>
+                <p className="mt-2 max-w-xs text-sm leading-6 text-paper/72">{photoCards[2].summary}</p>
+              </div>
+            </Reveal>
+          ) : null}
+
+          {other ? (
+            <Reveal className="border border-line bg-ivory p-7 md:p-10 lg:col-span-7">
+              <div className="flex h-full flex-col justify-between gap-6">
                 <div>
-                  <p className="eyebrow">{rest[2].title}</p>
+                  <p className="eyebrow">{other.title}</p>
                   <h3 className="mt-3 font-display text-3xl tracking-tight md:text-4xl">
-                    {rest[2].name}
+                    {other.name}
                   </h3>
-                  <p className="lede mt-3 max-w-xl">{rest[2].body}</p>
+                  <p className="lede mt-3 max-w-xl">{other.body}</p>
                 </div>
                 <a href="#apply" className="btn btn-ghost w-full shrink-0 sm:w-auto">
                   Спросить по направлению

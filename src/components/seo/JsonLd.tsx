@@ -12,9 +12,11 @@ export function JsonLd() {
     email: contacts.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: contacts.address,
+      streetAddress: "1-й Тверской-Ямской переулок, 18",
+      addressLocality: "Москва",
+      addressCountry: "RU",
     },
-    areaServed: ["Schengen", "United Kingdom", "United States"],
+    areaServed: ["Schengen", "United Kingdom", "United States", "Japan"],
     serviceType: "Visa consulting",
   };
 

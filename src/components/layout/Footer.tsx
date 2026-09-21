@@ -57,12 +57,14 @@ export function Footer() {
 
       <div className="container-page flex flex-col gap-4 border-t border-white/8 py-6 text-[0.75rem] text-paper/40 md:flex-row md:items-center md:justify-between">
         <p>
-          © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.legalName}
+          © {new Date().getFullYear()} {siteConfig.name}
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <span>
-            {contacts.inn} · {contacts.ogrn}
-          </span>
+          {contacts.inn || contacts.ogrn ? (
+            <span>
+              {[contacts.inn, contacts.ogrn].filter(Boolean).join(" · ")}
+            </span>
+          ) : null}
           <Link href="/privacy" className="hover:text-paper/70">
             Политика ПДн
           </Link>

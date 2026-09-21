@@ -48,7 +48,9 @@ export function CookieBanner() {
   const visible = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    document.body.style.paddingBottom = visible ? "7.5rem" : "";
+    document.body.style.paddingBottom = visible
+      ? "calc(7.25rem + env(safe-area-inset-bottom, 0px))"
+      : "";
     return () => {
       document.body.style.paddingBottom = "";
     };
@@ -60,12 +62,12 @@ export function CookieBanner() {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-ink-soft text-paper"
+      className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-ink-soft pb-[env(safe-area-inset-bottom)] text-paper"
       role="dialog"
       aria-labelledby="cookie-title"
       aria-describedby="cookie-text"
     >
-      <div className="container-page flex flex-col gap-3 py-3.5 md:flex-row md:items-end md:justify-between md:gap-4 md:py-5">
+      <div className="container-page flex flex-col gap-3 py-3 md:flex-row md:items-end md:justify-between md:gap-4 md:py-5">
         <div className="max-w-2xl">
           <p id="cookie-title" className="text-sm font-semibold">
             Файлы cookie
@@ -82,12 +84,16 @@ export function CookieBanner() {
         <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
           <button
             type="button"
-            className="btn btn-ghost w-full border-paper/25 text-paper sm:w-auto"
+            className="btn btn-ghost min-h-10 w-full border-paper/25 px-3 py-2 text-[0.8rem] text-paper sm:w-auto"
             onClick={() => writeConsent("necessary")}
           >
             Отклонить необязательные
           </button>
-          <button type="button" className="btn btn-light w-full sm:w-auto" onClick={() => writeConsent("all")}>
+          <button
+            type="button"
+            className="btn btn-light min-h-10 w-full px-3 py-2 text-[0.8rem] sm:w-auto"
+            onClick={() => writeConsent("all")}
+          >
             Принять
           </button>
         </div>

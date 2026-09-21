@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Meridian",
   shortName: "Meridian",
-  legalName: "[Юридическое наименование]",
+  legalName: "Meridian",
   tagline: "Визовый сервис",
   description:
     "Помогаем подготовить документы, разобраться с требованиями и пройти визовый процесс без лишней бюрократии.",
@@ -11,17 +11,17 @@ export const siteConfig = {
 };
 
 export const contacts = {
-  email: "hello@meridian.example",
-  phone: "+7 (000) 000-00-00",
-  phoneHref: "tel:+70000000000",
-  telegram: "https://t.me/meridian_example",
-  telegramLabel: "@meridian_example",
-  whatsapp: "https://wa.me/70000000000",
+  email: "visa.reg@yandex.ru",
+  phone: "+7 (969) 113-69-99",
+  phoneHref: "tel:+79691136999",
+  telegram: "https://t.me/Iziii04",
+  telegramLabel: "@Iziii04",
+  whatsapp: "https://wa.me/79691136999",
   whatsappLabel: "WhatsApp",
-  address: "[Адрес офиса]",
-  hours: "[График работы]",
-  inn: "[ИНН]",
-  ogrn: "[ОГРН]",
+  address: "Москва, 1-й Тверской-Ямской переулок, 18",
+  hours: "",
+  inn: "",
+  ogrn: "",
 };
 
 export const legal = {
@@ -32,7 +32,7 @@ export const legal = {
 export const trustFacts = [
   { id: "check", title: "Проверка пакета", text: "Смотрим документы до подачи, а не после отказа." },
   { id: "plan", title: "Понятный план", text: "Сначала маршрут и требования, потом анкета." },
-  { id: "routes", title: "Несколько маршрутов", text: "Шенген, Великобритания, США и другие направления." },
+  { id: "routes", title: "Несколько маршрутов", text: "Шенген, Великобритания, США, Япония и другие направления." },
   { id: "follow", title: "Сопровождение", text: "Остаёмся на связи до решения консульства." },
 ] as const;
 
@@ -58,7 +58,7 @@ export const visaServices = [
     title: "Schengen",
     name: "Шенген",
     summary:
-      "Франция, Италия, Испания, Германия и другие страны Шенгенской зоны.",
+      "Франция, Италия, Испания, Греция и другие страны Шенгенской зоны.",
     body: "Помогаем собрать согласованный пакет: маршрут, финансы, страховка и формулировки, которые консульство ожидает увидеть вместе.",
     image: "/images/schengen.jpg",
     imageAlt: "Крыши Парижа и перспектива европейского города",
@@ -87,8 +87,19 @@ export const visaServices = [
     featured: false,
   },
   {
-    id: "other",
+    id: "japan",
     eyebrow: "04",
+    title: "Japan",
+    name: "Япония",
+    summary: "Туристические поездки и подготовка пакета к подаче.",
+    body: "Помогаем собрать документы, разобраться с требованиями и пройти процесс без лишней бюрократии.",
+    image: "/images/japan.jpg",
+    imageAlt: "Киото, пагода Ясака и традиционная улица на закате",
+    featured: false,
+  },
+  {
+    id: "other",
+    eyebrow: "05",
     title: "Other routes",
     name: "Другие направления",
     summary: "Помощь с другими типами виз.",
@@ -125,11 +136,11 @@ export const destinations = [
     span: "normal",
   },
   {
-    id: "germany",
-    name: "Germany",
-    nameRu: "Германия",
-    image: "/images/germany.jpg",
-    imageAlt: "Берлинская архитектура и широкая городская ось",
+    id: "japan",
+    name: "Japan",
+    nameRu: "Япония",
+    image: "/images/japan.jpg",
+    imageAlt: "Киото, пагода Ясака и традиционная улица на закате",
     span: "normal",
   },
   {
@@ -170,11 +181,11 @@ export const destinationOptions = [
   { value: "france", label: "Франция" },
   { value: "italy", label: "Италия" },
   { value: "spain", label: "Испания" },
-  { value: "germany", label: "Германия" },
   { value: "greece", label: "Греция" },
   { value: "switzerland", label: "Швейцария" },
   { value: "uk", label: "Великобритания" },
   { value: "usa", label: "США" },
+  { value: "japan", label: "Япония" },
   { value: "other", label: "Другое направление" },
 ] as const;
 
@@ -289,7 +300,7 @@ export const copy = {
     "Помогаем пройти визовый процесс от консультации до получения паспорта",
   servicesTitle: "Оформляем визы для путешествий и бизнеса",
   servicesLead:
-    "Шенген, Великобритания, США и другие маршруты — с понятным планом и спокойной подачей.",
+    "Шенген, Великобритания, США, Япония и другие маршруты — с понятным планом и спокойной подачей.",
   destinationsTitle: "Куда собираетесь?",
   destinationsLead:
     "Основные направления, с которыми работаем чаще всего. Нужна другая страна — напишите, разберём маршрут.",

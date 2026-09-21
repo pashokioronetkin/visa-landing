@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Literata, Manrope } from "next/font/google";
 import { CookieBanner } from "@/components/legal/CookieBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -16,6 +16,10 @@ const display = Literata({
   variable: "--font-display",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

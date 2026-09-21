@@ -24,7 +24,7 @@ export function FinalCTA() {
             {copy.finalTitle}
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-paper/70">{copy.finalLead}</p>
-          <a href="#apply" className="btn btn-light mt-8 w-full sm:w-auto">
+          <a href="#apply" className="btn btn-light mt-8 w-auto max-w-full">
             Получить консультацию
           </a>
         </Reveal>

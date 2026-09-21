@@ -13,8 +13,8 @@ export default function ConsentPage() {
     <LegalLayout eyebrow="Согласие" title="Согласие на обработку персональных данных">
       <p>Версия {legal.consentVersion}. Действует вместе с формой заявки на сайте.</p>
       <p>
-        Я, оставляя заявку на сайте {siteConfig.name}, даю {siteConfig.legalName} (ИНН {contacts.inn},
-        ОГРН {contacts.ogrn}, адрес {contacts.address}) согласие на обработку моих персональных
+        Я, оставляя заявку на сайте {siteConfig.name}, даю {siteConfig.legalName} (адрес{" "}
+        {contacts.address}) согласие на обработку моих персональных
         данных: имя, телефон, email, сведения о планируемой поездке и комментарий, а также
         технические данные, необходимые для фиксации согласия (дата, версия документа, IP-адрес,
         сведения о браузере).

@@ -21,7 +21,7 @@ export function Hero() {
             </a>
           </div>
           <p className="mt-7 text-[0.72rem] leading-5 font-medium tracking-[0.06em] text-mist uppercase md:text-[0.78rem]">
-            Шенген · Великобритания · США · другие направления
+            Шенген · Великобритания · США · Япония
           </p>
         </div>
 

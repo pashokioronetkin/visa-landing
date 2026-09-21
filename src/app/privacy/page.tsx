@@ -11,16 +11,12 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <LegalLayout eyebrow="152-ФЗ" title="Политика обработки персональных данных">
-      <p>
-        Редакция от {legal.documentsUpdated}. Документ-шаблон: перед запуском замените реквизиты
-        оператора и пройдите юридическую проверку.
-      </p>
+      <p>Редакция от {legal.documentsUpdated}.</p>
 
       <h2>1. Оператор</h2>
       <p>
-        Оператор: {siteConfig.legalName}, ИНН {contacts.inn}, ОГРН {contacts.ogrn}, адрес{" "}
-        {contacts.address}. Контакт для запросов субъектов ПДн:{" "}
-        <a href={`mailto:${contacts.email}`}>{contacts.email}</a>, {contacts.phone}.
+        Оператор: {siteConfig.legalName}, адрес {contacts.address}. Контакт для запросов субъектов
+        ПДн: <a href={`mailto:${contacts.email}`}>{contacts.email}</a>, {contacts.phone}.
       </p>
 
       <h2>2. Какие данные обрабатываем</h2>
