@@ -6,7 +6,7 @@ export function FAQ() {
     <section id="faq" className="section-pad">
       <div className="container-page grid gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <p className="eyebrow">05 / FAQ</p>
+          <p className="eyebrow">06 / FAQ</p>
           <h2 className="display-title mt-4 text-[clamp(1.8rem,5vw,3.4rem)]">
             {copy.faqTitle}
           </h2>

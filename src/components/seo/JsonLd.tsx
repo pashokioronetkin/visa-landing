@@ -16,7 +16,7 @@ export function JsonLd() {
       addressLocality: "Москва",
       addressCountry: "RU",
     },
-    areaServed: ["Schengen", "United Kingdom", "United States", "Japan"],
+    areaServed: ["Schengen", "United Kingdom", "United States", "Japan", "China"],
     serviceType: "Visa consulting",
   };
 

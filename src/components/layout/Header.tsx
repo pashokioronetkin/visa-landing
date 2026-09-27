@@ -20,7 +20,7 @@ export function Header() {
       <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-2 sm:gap-4 xl:gap-6">
         <Logo />
 
-        <nav className="hidden items-center gap-5 xl:flex" aria-label="Основная навигация">
+        <nav className="hidden items-center gap-4 xl:flex" aria-label="Основная навигация">
           {navigation.map((item) => (
             <a
               key={item.href}

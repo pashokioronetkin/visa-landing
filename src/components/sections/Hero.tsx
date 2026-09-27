@@ -21,7 +21,7 @@ export function Hero() {
             </a>
           </div>
           <p className="mt-7 text-[0.72rem] leading-5 font-medium tracking-[0.06em] text-mist uppercase md:text-[0.78rem]">
-            Шенген · Великобритания · США · Япония
+            Шенген · Великобритания · США · Япония · Китай
           </p>
         </div>
 
@@ -37,19 +37,15 @@ export function Hero() {
           <div className="absolute inset-0 bg-ink/10" />
 
           <aside className="dossier absolute right-3 bottom-3 left-3 p-4 sm:right-5 sm:bottom-5 sm:left-5 md:right-auto md:bottom-10 md:left-8 md:w-[260px] md:p-5">
-            <div className="flex items-center justify-between text-[0.68rem] tracking-[0.14em] text-ink uppercase">
-              <span>{hero.dossier.label}</span>
-              <span>{hero.dossier.code}</span>
-            </div>
-            <div className="mt-3 font-display text-[1.7rem] leading-tight md:text-[2rem]">
+            <p className="text-[0.68rem] tracking-[0.14em] text-bronze uppercase">
               {hero.dossier.country}
-            </div>
-            <p className="mt-2 text-sm text-mist">{hero.dossier.type}</p>
-            <div className="hairline my-3 bg-line-strong" />
-            <p className="text-[0.72rem] tracking-[0.12em] text-bronze uppercase">
-              {hero.dossier.status}
             </p>
-            <p className="mt-2 text-sm text-ink">{hero.dossier.note}</p>
+            <div className="mt-3 font-display text-[1.7rem] leading-tight md:text-[2rem]">
+              {hero.dossier.type}
+            </div>
+            <div className="hairline my-3 bg-line-strong" />
+            <p className="text-sm text-ink">{hero.dossier.status}</p>
+            <p className="mt-2 text-sm text-mist">{hero.dossier.note}</p>
           </aside>
         </div>
       </div>

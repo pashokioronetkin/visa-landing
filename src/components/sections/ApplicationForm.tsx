@@ -107,7 +107,7 @@ export function ApplicationForm() {
       <section id="apply" className="section-pad bg-ink-soft text-paper">
         <div className="container-page grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow text-bronze-light">06 / Заявка</p>
+            <p className="eyebrow text-bronze-light">07 / Заявка</p>
             <h2 className="display-title mt-4 text-[clamp(2.1rem,4vw,3.4rem)]">
               {copy.formSuccessTitle}
             </h2>
@@ -138,7 +138,7 @@ export function ApplicationForm() {
     <section id="apply" className="section-pad bg-ink-soft text-paper">
       <div className="container-page grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <p className="eyebrow text-bronze-light">06 / Заявка</p>
+          <p className="eyebrow text-bronze-light">07 / Заявка</p>
           <h2 className="display-title mt-4 text-[clamp(2.1rem,4vw,3.4rem)]">
             {copy.formTitle}
           </h2>

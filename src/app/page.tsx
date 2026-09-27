@@ -1,3 +1,4 @@
+import { Agents } from "@/components/sections/Agents";
 import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { Destinations } from "@/components/sections/Destinations";
 import { FAQ } from "@/components/sections/FAQ";
@@ -22,6 +23,7 @@ export default function Home() {
         <Destinations />
         <WhyUs />
         <Process />
+        <Agents />
         <FAQ />
         <ApplicationForm />
         <FinalCTA />

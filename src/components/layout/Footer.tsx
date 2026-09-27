@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
-import { contacts, navigation, siteConfig } from "@/content/site";
+import { contacts, copy, navigation, siteConfig } from "@/content/site";
 
 export function Footer() {
   return (
@@ -9,8 +9,7 @@ export function Footer() {
         <div className="md:col-span-5">
           <Logo inverted />
           <p className="mt-6 max-w-sm text-sm leading-7 text-paper/58">
-            Визовый сервис для спокойной подготовки документов. Помогаем
-            разобраться в требованиях и довести заявку до подачи.
+            {copy.footerBlurb}
           </p>
         </div>
 
