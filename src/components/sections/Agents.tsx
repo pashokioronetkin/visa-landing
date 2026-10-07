@@ -6,16 +6,16 @@ export function Agents() {
     <section id="agents" className="section-pad bg-ivory">
       <div className="container-page">
         <Reveal>
-          <p className="eyebrow">05 / Для агентов</p>
+          <p className="eyebrow">03 / Для агентов</p>
           <div className="mt-4 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <h2 className="display-title max-w-[16ch] text-[clamp(1.8rem,5vw,3.5rem)]">
+            <h2 className="display-title max-w-xl text-[clamp(1.8rem,5vw,3.5rem)]">
               {copy.agentsTitle}
             </h2>
-            <p className="lede max-w-sm">{copy.agentsLead}</p>
+            <p className="lede max-w-sm md:pb-1">{copy.agentsLead}</p>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2">
           {agentBenefits.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <p className="text-[0.72rem] tracking-[0.16em] text-bronze uppercase">

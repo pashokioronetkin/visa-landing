@@ -6,7 +6,7 @@ export function Process() {
     <section id="process" className="section-pad">
       <div className="container-page">
         <Reveal>
-          <p className="eyebrow">04 / Как работаем</p>
+          <p className="eyebrow">02 / Как работаем</p>
           <div className="mt-4 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="display-title text-[clamp(1.8rem,5vw,3.5rem)]">
               {copy.processTitle}
