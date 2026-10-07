@@ -1,4 +1,4 @@
-import { copy, agentBenefits } from "@/content/site";
+import { contacts, copy, agentBenefits } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function Agents() {
@@ -7,15 +7,13 @@ export function Agents() {
       <div className="container-page">
         <Reveal>
           <p className="eyebrow">03 / Для агентов</p>
-          <div className="mt-4 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <h2 className="display-title max-w-xl text-[clamp(1.8rem,5vw,3.5rem)]">
-              {copy.agentsTitle}
-            </h2>
-            <p className="lede max-w-sm md:pb-1">{copy.agentsLead}</p>
-          </div>
+          <h2 className="display-title mt-4 max-w-[20ch] text-[clamp(1.8rem,5vw,3.5rem)]">
+            {copy.agentsTitle}
+          </h2>
+          <p className="lede mt-5 max-w-md">{copy.agentsLead}</p>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+        <div className="mt-10 grid max-w-3xl gap-8 sm:grid-cols-2 sm:gap-12">
           {agentBenefits.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <p className="text-[0.72rem] tracking-[0.16em] text-bronze uppercase">
@@ -27,10 +25,20 @@ export function Agents() {
           ))}
         </div>
 
-        <Reveal delay={0.16}>
-          <a href="#apply" className="btn btn-primary mt-10 w-full sm:w-auto">
-            {copy.agentsCta}
-          </a>
+        <Reveal delay={0.12}>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href={contacts.telegram}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary w-full sm:w-auto"
+            >
+              {copy.agentsTelegramCta}
+            </a>
+            <a href={`mailto:${contacts.email}`} className="btn btn-ghost w-full sm:w-auto">
+              {copy.agentsEmailCta}
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
