@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
-import { navigation } from "@/content/site";
+import { contacts, navigation } from "@/content/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,9 @@ export function Header() {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href="#apply"
+            href={contacts.telegramBot}
+            target="_blank"
+            rel="noreferrer"
             className="btn btn-primary header-cta"
           >
             <span className="xl:hidden">Консультация</span>
@@ -65,7 +67,13 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a href="#apply" className="btn btn-primary mt-6" onClick={() => setOpen(false)}>
+          <a
+            href={contacts.telegramBot}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-primary mt-6"
+            onClick={() => setOpen(false)}
+          >
             Получить консультацию
           </a>
         </nav>

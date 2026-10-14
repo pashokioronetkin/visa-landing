@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { copy } from "@/content/site";
+import { contacts, copy } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
 import { assetPath } from "@/lib/utils";
 
@@ -24,8 +24,13 @@ export function FinalCTA() {
             {copy.finalTitle}
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-paper/70">{copy.finalLead}</p>
-          <a href="#apply" className="btn btn-light mt-8 w-auto max-w-full">
-            Получить консультацию
+          <a
+            href={contacts.telegramBot}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-light mt-8 w-auto max-w-full"
+          >
+            Написать в Telegram
           </a>
         </Reveal>
       </div>

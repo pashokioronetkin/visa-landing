@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { copy, visaServices } from "@/content/site";
+import { contacts, copy, visaServices } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
 import { assetPath } from "@/lib/utils";
 
@@ -100,7 +100,12 @@ export function VisaServices() {
                   </h3>
                   <p className="lede mt-3 max-w-xl">{other.body}</p>
                 </div>
-                <a href="#apply" className="btn btn-ghost w-full shrink-0 sm:w-auto">
+                <a
+                  href={contacts.telegramBot}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-ghost w-full shrink-0 sm:w-auto"
+                >
                   Спросить по направлению
                 </a>
               </div>

@@ -16,6 +16,7 @@ export const contacts = {
   phoneHref: "tel:+79691136999",
   telegram: "https://t.me/Iziii04",
   telegramLabel: "@Iziii04",
+  telegramBot: process.env.NEXT_PUBLIC_TELEGRAM_BOT || "https://t.me/Iziii04",
   whatsapp: "https://wa.me/79691136999",
   whatsappLabel: "WhatsApp",
   address: "Москва, 1-й Тверской-Ямской переулок, 18",
@@ -38,7 +39,6 @@ export const trustFacts = [
 
 export const navigation = [
   { href: "#visas", label: "Визы" },
-  { href: "#process", label: "Как работаем" },
   { href: "#agents", label: "Для агентов" },
   { href: "#faq", label: "FAQ" },
 ] as const;
@@ -87,9 +87,9 @@ export const visaServices = [
   {
     id: "japan",
     eyebrow: "04",
-    title: "Туризм и учёба",
-    name: "Япония",
-    summary: "Япония и Китай: туристическая и студенческая виза.",
+    title: "Япония, Китай",
+    name: "Азия",
+    summary: "Туристическая и студенческая виза.",
     body: "Помогаем собрать документы на туристическую и студенческую визу в Японию и Китай.",
     image: "/images/japan.jpg",
     imageAlt: "Киото, пагода Ясака и традиционная улица на закате",
@@ -272,7 +272,7 @@ export const faq = [
   {
     question: "Как обрабатываются мои данные?",
     answer:
-      "Заявка уходит только после согласия по 152-ФЗ. Мы берём имя, телефон, email и сведения о поездке, чтобы ответить вам. Подробности — в политике обработки ПДн. Отозвать согласие можно письмом на email.",
+      "На сайте заявку не заполняем. Консультация идёт в Telegram. Если напишете нам, обработаем переписку, чтобы ответить. Подробности — в политике обработки ПДн.",
   },
 ] as const;
 
@@ -317,7 +317,7 @@ export const copy = {
   formSuccessText:
     "Заявка отправлена. Наш специалист свяжется с вами в ближайшее время.",
   finalTitle: "Пора планировать поездку.",
-  finalLead: "Оставьте заявку — расскажем, какая виза нужна и с чего начать.",
+  finalLead: "Напишите в Telegram — расскажем, какая виза нужна и с чего начать.",
   footerBlurb:
     "Визовый сервис. Помогаем подготовить документы и довести заявку до подачи.",
 };

@@ -1,9 +1,7 @@
 import { Agents } from "@/components/sections/Agents";
-import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Hero } from "@/components/sections/Hero";
-import { Process } from "@/components/sections/Process";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { VisaServices } from "@/components/sections/VisaServices";
 import { Footer } from "@/components/layout/Footer";
@@ -18,10 +16,8 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <VisaServices />
-        <Process />
         <Agents />
         <FAQ />
-        <ApplicationForm />
         <FinalCTA />
       </main>
       <Footer />

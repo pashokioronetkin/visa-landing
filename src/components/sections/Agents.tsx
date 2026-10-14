@@ -6,7 +6,7 @@ export function Agents() {
     <section id="agents" className="section-pad bg-ivory">
       <div className="container-page">
         <Reveal>
-          <p className="eyebrow">03 / Для агентов</p>
+          <p className="eyebrow">02 / Для агентов</p>
           <h2 className="display-title mt-4 max-w-[20ch] text-[clamp(1.8rem,5vw,3.5rem)]">
             {copy.agentsTitle}
           </h2>

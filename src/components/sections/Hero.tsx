@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { hero } from "@/content/site";
+import { contacts, hero } from "@/content/site";
 import { assetPath } from "@/lib/utils";
 
 export function Hero() {
@@ -13,7 +13,12 @@ export function Hero() {
           </h1>
           <p className="lede mt-5 max-w-md">{hero.subtitle}</p>
           <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
-            <a href="#apply" className="btn btn-primary w-full sm:w-auto">
+            <a
+              href={contacts.telegramBot}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary w-full sm:w-auto"
+            >
               {hero.primaryCta}
             </a>
             <a href="#visas" className="btn btn-ghost w-full sm:w-auto">

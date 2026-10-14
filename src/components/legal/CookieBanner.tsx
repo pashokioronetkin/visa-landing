@@ -73,7 +73,7 @@ export function CookieBanner() {
             Файлы cookie
           </p>
           <p id="cookie-text" className="mt-1.5 text-[0.8rem] leading-5 text-paper/75 md:mt-2 md:text-sm md:leading-6">
-            Используем только необходимые cookie: запоминаем ваш выбор и защищаем форму заявки.
+            Используем только необходимые cookie: запоминаем ваш выбор.
             Рекламных и аналитических cookie сейчас нет. Подробнее — в{" "}
             <Link href="/cookies" className="underline underline-offset-4">
               политике cookie
