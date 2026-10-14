@@ -1,7 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { COOKIE_CONSENT_NAME, parseCookieConsent } from "@/lib/legal";
 import { contacts } from "@/content/site";
+
+function hasCookieDecision() {
+  if (typeof document === "undefined") {
+    return false;
+  }
+
+  const match = document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${COOKIE_CONSENT_NAME}=`));
+
+  return parseCookieConsent(match?.split("=")[1]) !== null;
+}
 
 export function MobileCta() {
   const [visible, setVisible] = useState(false);
@@ -15,15 +29,17 @@ export function MobileCta() {
       const heroBottom = hero.getBoundingClientRect().bottom;
       const footerTop = footer?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
       const footerVisible = footerTop < window.innerHeight - 12;
-      setVisible(heroBottom < 72 && !footerVisible);
+      setVisible(heroBottom < 72 && !footerVisible && hasCookieDecision());
     };
 
     update();
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
+    window.addEventListener("meridian-cookie-consent", update);
     return () => {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
+      window.removeEventListener("meridian-cookie-consent", update);
     };
   }, []);
 
@@ -34,7 +50,7 @@ export function MobileCta() {
       <a
         href={contacts.telegramBot}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="btn btn-primary min-h-10 w-full px-3 py-2 text-[0.8rem]"
       >
         Получить консультацию

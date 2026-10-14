@@ -30,7 +30,7 @@ export function Agents() {
             <a
               href={contacts.telegram}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn btn-primary w-full sm:w-auto"
             >
               {copy.agentsTelegramCta}

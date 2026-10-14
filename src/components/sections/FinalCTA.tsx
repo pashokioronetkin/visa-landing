@@ -27,7 +27,7 @@ export function FinalCTA() {
           <a
             href={contacts.telegramBot}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn btn-light mt-8 w-auto max-w-full"
           >
             Написать в Telegram

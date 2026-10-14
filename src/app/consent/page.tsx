@@ -11,11 +11,15 @@ export const metadata: Metadata = {
 export default function ConsentPage() {
   return (
     <LegalLayout eyebrow="Согласие" title="Согласие на обработку персональных данных">
-      <p>Версия {legal.consentVersion}. Формы заявки на сайте нет: консультация идёт в Telegram.</p>
       <p>
-        Я, обращаясь в {siteConfig.name} через Telegram или email, даю {siteConfig.legalName} (адрес{" "}
-        {contacts.address}) согласие на обработку моих персональных
-        данных: имя, телефон, username, сведения о планируемой поездке и текст обращения.
+        Версия {legal.consentVersion}. Формы заявки на сайте нет. Консультация идёт в Telegram,
+        WhatsApp или по email.
+      </p>
+      <p>
+        Я, обращаясь в {siteConfig.name} через Telegram, WhatsApp или email, даю {siteConfig.legalName}{" "}
+        (адрес {contacts.address}) согласие на обработку моих персональных данных: имя, телефон,
+        username, сведения о планируемой поездке и текст обращения. Понимаю, что сообщение уходит в
+        выбранный мессенджер и может обрабатываться за пределами РФ по правилам этого сервиса.
       </p>
       <p>
         Цель обработки: связь со мной и консультация по визовому сопровождению. Обработка включает

@@ -16,7 +16,7 @@ export function Hero() {
             <a
               href={contacts.telegramBot}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn btn-primary w-full sm:w-auto"
             >
               {hero.primaryCta}

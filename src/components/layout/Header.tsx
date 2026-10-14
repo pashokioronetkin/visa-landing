@@ -36,7 +36,7 @@ export function Header() {
           <a
             href={contacts.telegramBot}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn btn-primary header-cta"
           >
             <span className="xl:hidden">Консультация</span>
@@ -70,7 +70,7 @@ export function Header() {
           <a
             href={contacts.telegramBot}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn btn-primary mt-6"
             onClick={() => setOpen(false)}
           >

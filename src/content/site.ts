@@ -26,8 +26,8 @@ export const contacts = {
 };
 
 export const legal = {
-  consentVersion: "2026-09-12",
-  documentsUpdated: "12.09.2026",
+  consentVersion: "2026-10-14",
+  documentsUpdated: "14.10.2026",
 };
 
 export const trustFacts = [

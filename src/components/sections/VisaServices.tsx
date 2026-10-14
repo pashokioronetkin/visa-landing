@@ -103,7 +103,7 @@ export function VisaServices() {
                 <a
                   href={contacts.telegramBot}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="btn btn-ghost w-full shrink-0 sm:w-auto"
                 >
                   Спросить по направлению

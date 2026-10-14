@@ -32,8 +32,9 @@ function readConsent() {
 
 function writeConsent(value: "all" | "necessary") {
   const secure = window.location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = `${COOKIE_CONSENT_NAME}=${value}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=Lax${secure}`;
+  document.cookie = `${COOKIE_CONSENT_NAME}=${encodeURIComponent(value)}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=Lax${secure}`;
   emit();
+  window.dispatchEvent(new Event("meridian-cookie-consent"));
 }
 
 function getClientSnapshot() {
@@ -73,8 +74,8 @@ export function CookieBanner() {
             Файлы cookie
           </p>
           <p id="cookie-text" className="mt-1.5 text-[0.8rem] leading-5 text-paper/75 md:mt-2 md:text-sm md:leading-6">
-            Используем только необходимые cookie: запоминаем ваш выбор.
-            Рекламных и аналитических cookie сейчас нет. Подробнее — в{" "}
+            Используем только необходимые cookie, чтобы запомнить этот выбор.
+            Рекламных и аналитических cookie нет. Подробнее — в{" "}
             <Link href="/cookies" className="underline underline-offset-4">
               политике cookie
             </Link>
@@ -84,17 +85,10 @@ export function CookieBanner() {
         <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
           <button
             type="button"
-            className="btn btn-ghost min-h-10 w-full border-paper/25 px-3 py-2 text-[0.8rem] text-paper sm:w-auto"
+            className="btn btn-light min-h-10 w-full px-3 py-2 text-[0.8rem] sm:w-auto"
             onClick={() => writeConsent("necessary")}
           >
-            Отклонить необязательные
-          </button>
-          <button
-            type="button"
-            className="btn btn-light min-h-10 w-full px-3 py-2 text-[0.8rem] sm:w-auto"
-            onClick={() => writeConsent("all")}
-          >
-            Принять
+            Понятно
           </button>
         </div>
       </div>
